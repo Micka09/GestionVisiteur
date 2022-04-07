@@ -1,7 +1,7 @@
 package com.example.gestionvisiteur.modele;
 
 public class Visiteur {
-    private int id;
+    private String id;
     private String nom;
     private String prenom;
     private String login;
@@ -11,7 +11,7 @@ public class Visiteur {
     private String ville;
     private String dateEmbauche;
 
-    public Visiteur(int id, String nom, String prenom, String login, String mdp, String adresse, String cp, String ville, String dateEmbauche) {
+    public Visiteur(String id, String nom, String prenom, String login, String mdp, String adresse, String cp, String ville, String dateEmbauche) {
         this.id = id;
         this.nom = nom;
         this.prenom = prenom;
@@ -23,11 +23,11 @@ public class Visiteur {
         this.dateEmbauche = dateEmbauche;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
