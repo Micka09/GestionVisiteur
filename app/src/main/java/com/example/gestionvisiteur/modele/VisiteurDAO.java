@@ -86,6 +86,57 @@ public class VisiteurDAO {
     }
         return lesVisiteurs;
 }
+    public String modifierVisiteur(Visiteur unVisiteur,String idV) {
+        String result = "";
+        //adresse de l'URL de l\'API à interroger et fichier php permettant d'\ajouter le visiteur
+        String myUrl="http://mick-souloumiac1.alwaysdata.net/API/modifVisiteurById.php";
+        //informations à transmettre pour effectuer l'ajout
+        String params =
+                "id="+unVisiteur.getId()+"&nom="+unVisiteur.getNom()+
+                        "&prenom="+unVisiteur.getPrenom()+
+                        "&login="+unVisiteur.getLogin()+
+                        "&mdp="+unVisiteur.getMdp()+
+                        "&adresse="+unVisiteur.getAdresse()+
+                        "&cp="+unVisiteur.getCp()+
+                        "&ville="+unVisiteur.getVille()+
+                        "&dateEmbauche="+unVisiteur.getDateEmbauche()+
+                        "id="+idV;
+        Log.d("requete",params);
+
+        HttpPostRequest postRequest = new HttpPostRequest();
+        try{
+            result = postRequest.execute(new String []{myUrl, params}).get();
+        }
+        catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
+        Log.d("resultat",result);
+        return result;
+    }
+
+    public String supprimerVisiteur(Visiteur unVisiteur) {
+        String result = "";
+        //adresse de l'URL de l\'API à interroger et fichier php permettant d'\ajouter le visiteur
+        String myUrl="http://mick-souloumiac1.alwaysdata.net/API/supVisiteurbyId.php";
+        //informations à transmettre pour effectuer l'ajout
+        String params =
+                "id="+unVisiteur.getId();
+        Log.d("requete",params);
+
+        HttpPostRequest postRequest = new HttpPostRequest();
+        try{
+            result = postRequest.execute(new String []{myUrl, params}).get();
+        }
+        catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
+        Log.d("resultat",result);
+        return result;
+    }
 
 
 }

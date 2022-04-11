@@ -23,6 +23,10 @@ public class Visiteur {
         this.dateEmbauche = dateEmbauche;
     }
 
+    public Visiteur(String id) {
+        this.id = id;
+    }
+
     public String getId() {
         return id;
     }
@@ -98,5 +102,19 @@ public class Visiteur {
     @Override
     public String toString() {
         return nom+"  "+prenom+"  "+id;
+    }
+
+    public String toString2() {
+        return "Visiteur{" +
+                "id='" + id + '\'' +
+                ", nom='" + nom + '\'' +
+                ", prenom='" + prenom + '\'' +
+                ", login='" + login + '\'' +
+                ", mdp='" + mdp + '\'' +
+                ", adresse='" + adresse + '\'' +
+                ", cp='" + cp + '\'' +
+                ", ville='" + ville + '\'' +
+                ", dateEmbauche='" + dateEmbauche + '\'' +
+                '}';
     }
 }
