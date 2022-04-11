@@ -38,6 +38,16 @@ public class ConsultActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Visiteur vistItem=(Visiteur) listeV.getAdapter().getItem(i);
                 Intent z = new Intent(ConsultActivity.this,DetailsActivity.class);
+                z.putExtra("id",vistItem.getId());
+                z.putExtra("nom",vistItem.getNom());
+                z.putExtra("prenom",vistItem.getPrenom());
+                z.putExtra("login",vistItem.getLogin());
+                z.putExtra("mdp",vistItem.getMdp());
+                z.putExtra("adresse",vistItem.getAdresse());
+                z.putExtra("cp",vistItem.getCp());
+                z.putExtra("ville",vistItem.getVille());
+                z.putExtra("dateEmbauche",vistItem.getDateEmbauche());
+
                 startActivity(z);
             }
         });
