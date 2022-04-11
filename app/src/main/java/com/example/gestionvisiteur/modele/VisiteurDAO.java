@@ -21,7 +21,7 @@ public class VisiteurDAO {
     public String addVisiteur(Visiteur unVisiteur) {
         String result = "";
         //adresse de l'URL de l\'API à interroger et fichier php permettant d'\ajouter le visiteur
-        String myUrl="http://mick-souloumiac1.alwaysdata.net/API/addVisiteur.php ";
+        String myUrl="http://mick-souloumiac1.alwaysdata.net/API/addVisiteur.php";
         //informations à transmettre pour effectuer l'ajout
         String params =
                 "id="+unVisiteur.getId()+"&nom="+unVisiteur.getNom()+

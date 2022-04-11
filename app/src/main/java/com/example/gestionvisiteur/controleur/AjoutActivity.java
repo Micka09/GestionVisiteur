@@ -1,10 +1,13 @@
 package com.example.gestionvisiteur.controleur;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -61,7 +64,19 @@ public class AjoutActivity extends AppCompatActivity implements View.OnClickList
         String dateEmbV= (String) dateEmbauche.getText().toString();
 
         Visiteur unVisiteur=new Visiteur(idV,nomV,preV,loginV,mdpV,adrV,cpV,villeV,dateEmbV);
-        managerDao.addVisiteur(unVisiteur);
+        Log.d("ajouevi",unVisiteur.toString());
+
+        String result= managerDao.addVisiteur(unVisiteur);
+        if(result.contains("1")){
+            Context c = getApplicationContext();
+            Toast msg=Toast.makeText(c,"Le client a bie été insere !", Toast.LENGTH_LONG);
+            msg.show();
+            }
+        else{Context c=getApplicationContext();
+            Toast msg=Toast.makeText(c,"Le client n'a pas ete insere !", Toast.LENGTH_LONG);
+            msg.show();
+        }
+
         Intent i=new  Intent(AjoutActivity.this,PropositionActivity.class);
         startActivity(i);
 
