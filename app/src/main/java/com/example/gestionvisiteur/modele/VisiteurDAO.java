@@ -67,8 +67,8 @@ public class VisiteurDAO {
             JSONArray array=new JSONArray(result);
             for(int i=0;i < array.length();i++){
                 String id = array.getJSONObject(i).getString("id");
-                String nom = array.getJSONObject(i).getString("prenom");
-                String prenom = array.getJSONObject(i).getString("nom");
+                String nom = array.getJSONObject(i).getString("nom");
+                String prenom = array.getJSONObject(i).getString("prenom");
                 String login = array.getJSONObject(i).getString("login");
                 String mdp = array.getJSONObject(i).getString("mdp");
                 String adresse = array.getJSONObject(i).getString("adresse");

@@ -11,16 +11,18 @@ import com.example.gestionvisiteur.R;
 
 public class PropositionActivity extends AppCompatActivity implements View.OnClickListener {
     private Button ajout;
+    private Button cons;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_proposition);
 
+        cons=(Button) findViewById(R.id.buttonCo);
+        cons.setOnClickListener(this);
+
         ajout=(Button) findViewById(R.id.buttonAj);
 
         ajout.setOnClickListener(this);
-
-
 
 
     }
@@ -28,8 +30,19 @@ public class PropositionActivity extends AppCompatActivity implements View.OnCli
 
     @Override
     public void onClick(View view) {
-        Intent i = new Intent(PropositionActivity.this,AjoutActivity.class);
-        startActivity(i);
+        switch(view.getId()){
+            case R.id.buttonCo:
+                Intent i = new Intent(PropositionActivity.this,ConsultActivity.class);
+                startActivity(i);
+                break;
+
+            case R.id.buttonAj:
+                Intent z = new Intent(PropositionActivity.this,AjoutActivity.class);
+                startActivity(z);
+                break;
+
+        }
+
 
     }
 }

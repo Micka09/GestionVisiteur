@@ -97,10 +97,6 @@ public class Visiteur {
 
     @Override
     public String toString() {
-        return "Visiteur{" +
-                "id='" + id + '\'' +
-                ", nom='" + nom + '\'' +
-                ", prenom='" + prenom + '\'' +
-                '}';
+        return nom+"  "+prenom+"  "+id;
     }
 }
