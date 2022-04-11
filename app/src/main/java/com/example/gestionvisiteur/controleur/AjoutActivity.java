@@ -1,5 +1,6 @@
 package com.example.gestionvisiteur.controleur;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -46,7 +47,9 @@ public class AjoutActivity extends AppCompatActivity implements View.OnClickList
 
     @Override
     public void onClick(View view) {
+
         VisiteurDAO managerDao=new VisiteurDAO();
+
         String idV= (String) id.getText().toString();
         String nomV= (String) nom.getText().toString();
         String preV= (String) prenom.getText().toString();
@@ -59,6 +62,8 @@ public class AjoutActivity extends AppCompatActivity implements View.OnClickList
 
         Visiteur unVisiteur=new Visiteur(idV,nomV,preV,loginV,mdpV,adrV,cpV,villeV,dateEmbV);
         managerDao.addVisiteur(unVisiteur);
+        Intent i=new  Intent(AjoutActivity.this,PropositionActivity.class);
+        startActivity(i);
 
     }
 }

@@ -22,9 +22,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         valider.setOnClickListener(this);
 
-
-
-
     }
 
     @Override
