@@ -98,15 +98,9 @@ public class Visiteur {
     @Override
     public String toString() {
         return "Visiteur{" +
-                "id=" + id +
+                "id='" + id + '\'' +
                 ", nom='" + nom + '\'' +
                 ", prenom='" + prenom + '\'' +
-                ", login='" + login + '\'' +
-                ", mdp='" + mdp + '\'' +
-                ", adresse='" + adresse + '\'' +
-                ", cp='" + cp + '\'' +
-                ", ville='" + ville + '\'' +
-                ", dateEmbauche='" + dateEmbauche + '\'' +
                 '}';
     }
 }

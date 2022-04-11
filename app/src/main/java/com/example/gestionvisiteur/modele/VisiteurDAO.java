@@ -15,6 +15,7 @@ import java.util.concurrent.ExecutionException;
 public class VisiteurDAO {
 
     public VisiteurDAO() {
+
     }
 
 
@@ -46,5 +47,45 @@ public class VisiteurDAO {
         Log.d("resultat",result);
         return result;
     }
+    public ArrayList<Visiteur> recupVisiteur() {
+        String result = "";
+        String params="";
+        ArrayList<Visiteur> lesVisiteurs=new ArrayList<Visiteur>();
+        //adresse de l'URL de l\'API à interroger et fichier php permettant la recuperation des visiteurs
+        String myUrl="http://mick-souloumiac1.alwaysdata.net/API/getVisiteurs.php";
+        HttpPostRequest postRequest = new HttpPostRequest();
+        try{
+            result = postRequest.execute(new String []{myUrl, params}).get();
+        }
+        catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
+
+        try {
+            JSONArray array=new JSONArray(result);
+            for(int i=0;i < array.length();i++){
+                String id = array.getJSONObject(i).getString("id");
+                String nom = array.getJSONObject(i).getString("prenom");
+                String prenom = array.getJSONObject(i).getString("nom");
+                String login = array.getJSONObject(i).getString("login");
+                String mdp = array.getJSONObject(i).getString("mdp");
+                String adresse = array.getJSONObject(i).getString("adresse");
+                String cp = array.getJSONObject(i).getString("cp");
+                String ville = array.getJSONObject(i).getString("ville");
+                String dateEmbauche = array.getJSONObject(i).getString("dateEmbauche");
+
+                lesVisiteurs.add(new Visiteur(id,nom,prenom,login,mdp,adresse,cp,ville,dateEmbauche));
+            }
+
+        }
+
+    catch (JSONException e) {
+        e.printStackTrace();
+    }
+        return lesVisiteurs;
+}
+
 
 }

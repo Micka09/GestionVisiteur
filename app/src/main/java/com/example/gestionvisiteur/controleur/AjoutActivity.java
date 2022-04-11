@@ -28,16 +28,16 @@ public class AjoutActivity extends AppCompatActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ajout);
 
-        id=(EditText) findViewById(R.id.editTextId);
-        nom=(EditText) findViewById(R.id.editTextNom);
-        prenom=(EditText) findViewById(R.id.editTextPre);
-        login=(EditText) findViewById(R.id.editTextLogin);
-        mdp=(EditText) findViewById(R.id.editTextMdp);
-        adresse=(EditText) findViewById(R.id.editTextAdRue);
-        cp=(EditText) findViewById(R.id.editTextCP);
-        ville=(EditText) findViewById(R.id.editTextVille);
-        dateEmbauche=(EditText) findViewById(R.id.editTextDate);
-        ajoutBD=(Button) findViewById(R.id.buttonValiderAjout);
+        id=(EditText) findViewById(R.id.editTextId2);
+        nom=(EditText) findViewById(R.id.editTextNom2);
+        prenom=(EditText) findViewById(R.id.editTextPre2);
+        login=(EditText) findViewById(R.id.editTextLogin2);
+        mdp=(EditText) findViewById(R.id.editTextMdp2);
+        adresse=(EditText) findViewById(R.id.editTextAdRue2);
+        cp=(EditText) findViewById(R.id.editTextCP2);
+        ville=(EditText) findViewById(R.id.editTextVille2);
+        dateEmbauche=(EditText) findViewById(R.id.editTextDate2);
+        ajoutBD=(Button) findViewById(R.id.buttonValiderModif);
 
         ajoutBD.setOnClickListener(this);
 
