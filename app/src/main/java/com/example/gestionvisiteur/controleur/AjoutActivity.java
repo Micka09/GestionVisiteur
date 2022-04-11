@@ -63,18 +63,26 @@ public class AjoutActivity extends AppCompatActivity implements View.OnClickList
         String villeV= (String) ville.getText().toString();
         String dateEmbV= (String) dateEmbauche.getText().toString();
 
-        Visiteur unVisiteur=new Visiteur(idV,nomV,preV,loginV,mdpV,adrV,cpV,villeV,dateEmbV);
-        Log.d("ajouevi",unVisiteur.toString());
+        if(idV.isEmpty() || nomV.isEmpty() || preV.isEmpty() || loginV.isEmpty() || mdpV.isEmpty() || adrV.isEmpty() || cpV.isEmpty() || villeV.isEmpty() || dateEmbV.isEmpty()){
+            Toast msg=Toast.makeText(getApplicationContext(),"Veuillez remplir tout les champs !", Toast.LENGTH_LONG);
+        }else {
 
-        String result= managerDao.addVisiteur(unVisiteur);
-        if(result.contains("1")){
+            Visiteur unVisiteur=new Visiteur(idV,nomV,preV,loginV,mdpV,adrV,cpV,villeV,dateEmbV);
+            Log.d("ajouevi",unVisiteur.toString());
+
+            String result= managerDao.addVisiteur(unVisiteur);
+
+            if(result.contains("1")){
             Context c = getApplicationContext();
             Toast msg=Toast.makeText(c,"Le client a bie été insere !", Toast.LENGTH_LONG);
             msg.show();
             }
-        else{Context c=getApplicationContext();
+        else
+        {
+            Context c=getApplicationContext();
             Toast msg=Toast.makeText(c,"Le client n'a pas ete insere !", Toast.LENGTH_LONG);
             msg.show();
+        }
         }
 
         Intent i=new  Intent(AjoutActivity.this,PropositionActivity.class);
