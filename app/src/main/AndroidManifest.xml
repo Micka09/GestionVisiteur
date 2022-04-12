@@ -26,6 +26,7 @@
         <activity android:name=".controleur.PropositionActivity" android:exported="true"/>
         <activity android:name=".controleur.DetailsActivity" android:exported="true"/>
         <activity android:name=".controleur.ConsultActivity" android:exported="true"/>
+        <activity android:name=".controleur.ModifierActivity" android:exported="true"/>
 
     </application>
 

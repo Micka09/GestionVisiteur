@@ -4,12 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".controleur.DetailsActivity">
+    tools:context=".controleur.ModifierActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Choisir un visiteur"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/spinnVisiteur"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -235,12 +249,6 @@
                 tools:ignore="MissingConstraints"
                 tools:layout_editor_absoluteX="125dp"
                 tools:layout_editor_absoluteY="432dp" />
-
-            <Button
-                android:id="@+id/buttonSuppModif"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Supprimer" />
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>
