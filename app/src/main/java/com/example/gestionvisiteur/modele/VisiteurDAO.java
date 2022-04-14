@@ -138,5 +138,44 @@ public class VisiteurDAO {
         return result;
     }
 
+    public Visiteur seConnecter(String unIdentifiant,String unMotdePasse){
+        String result = "";
+        Visiteur visitco = null;
+        String myUrl="http://mick-souloumiac1.alwaysdata.net/API/connecterVisiteur.php";
+        String params =
+                "login="+unIdentifiant+
+                "&mdp="+unMotdePasse;
+
+        Log.d("requete",params);
+
+        HttpPostRequest postRequest = new HttpPostRequest();
+        try{
+            result = postRequest.execute(new String []{myUrl, params}).get();
+            Log.d("resultat",result);
+        }
+        catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
+
+        try {
+
+            JSONObject valeur=new JSONObject(result);
+            String log=valeur.getString("login");
+            String mdp= valeur.getString("mdp");
+
+            visitco=new Visiteur(log,mdp);
+
+
+
+            }
+
+        catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return visitco;
+    }
+
 
 }

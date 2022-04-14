@@ -23,6 +23,11 @@ public class Visiteur {
         this.dateEmbauche = dateEmbauche;
     }
 
+    public Visiteur(String login, String mdp) {
+        this.login = login;
+        this.mdp = mdp;
+    }
+
     public Visiteur(String id) {
         this.id = id;
     }
