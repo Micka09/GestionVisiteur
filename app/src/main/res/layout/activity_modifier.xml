@@ -40,7 +40,7 @@
                 android:textSize="16sp" />
 
             <EditText
-                android:id="@+id/editTextId3"
+                android:id="@+id/editTextId4"
                 android:layout_width="239dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -63,7 +63,7 @@
                 android:textSize="16sp" />
 
             <EditText
-                android:id="@+id/editTextNom3"
+                android:id="@+id/editTextNom4"
                 android:layout_width="239dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -86,7 +86,7 @@
                 android:textSize="16sp" />
 
             <EditText
-                android:id="@+id/editTextPre3"
+                android:id="@+id/editTextPre4"
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -109,7 +109,7 @@
                 android:textSize="16sp" />
 
             <EditText
-                android:id="@+id/editTextLogin3"
+                android:id="@+id/editTextLogin4"
                 android:layout_width="239dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -133,7 +133,7 @@
                 tools:layout_editor_absoluteY="228dp" />
 
             <EditText
-                android:id="@+id/editTextMdp3"
+                android:id="@+id/editTextMdp4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -156,7 +156,7 @@
                 android:textSize="16sp" />
 
             <EditText
-                android:id="@+id/editTextAdRue3"
+                android:id="@+id/editTextAdRue4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -179,7 +179,7 @@
                 android:textSize="16sp" />
 
             <EditText
-                android:id="@+id/editTextCP3"
+                android:id="@+id/editTextCP4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -202,7 +202,7 @@
                 android:textSize="16sp" />
 
             <EditText
-                android:id="@+id/editTextVille3"
+                android:id="@+id/editTextVille4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -227,7 +227,7 @@
                 tools:layout_editor_absoluteY="228dp" />
 
             <EditText
-                android:id="@+id/editTextDate3"
+                android:id="@+id/editTextDate4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -242,13 +242,19 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/ButtonModif2"
+                android:id="@+id/ButtonModif18"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Valider"
                 tools:ignore="MissingConstraints"
                 tools:layout_editor_absoluteX="125dp"
                 tools:layout_editor_absoluteY="432dp" />
+
+            <Button
+                android:id="@+id/buttonRetour4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Button" />
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

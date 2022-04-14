@@ -100,7 +100,7 @@ public class VisiteurDAO {
                         "&cp="+unVisiteur.getCp()+
                         "&ville="+unVisiteur.getVille()+
                         "&dateEmbauche="+unVisiteur.getDateEmbauche()+
-                        "id="+idV;
+                        "&idV="+idV;
         Log.d("requete",params);
 
         HttpPostRequest postRequest = new HttpPostRequest();

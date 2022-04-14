@@ -28,16 +28,16 @@ public class AjoutActivity extends AppCompatActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ajout);
 
-        id=(EditText) findViewById(R.id.editTextId3);
-        nom=(EditText) findViewById(R.id.editTextNom3);
-        prenom=(EditText) findViewById(R.id.editTextPre3);
-        login=(EditText) findViewById(R.id.editTextLogin3);
-        mdp=(EditText) findViewById(R.id.editTextMdp3);
-        adresse=(EditText) findViewById(R.id.editTextAdRue3);
-        cp=(EditText) findViewById(R.id.editTextCP3);
-        ville=(EditText) findViewById(R.id.editTextVille3);
-        dateEmbauche=(EditText) findViewById(R.id.editTextDate3);
-        ajoutBD=(Button) findViewById(R.id.ButtonModif2);
+        id=(EditText) findViewById(R.id.editTextId4);
+        nom=(EditText) findViewById(R.id.editTextNom4);
+        prenom=(EditText) findViewById(R.id.editTextPre4);
+        login=(EditText) findViewById(R.id.editTextLogin4);
+        mdp=(EditText) findViewById(R.id.editTextMdp4);
+        adresse=(EditText) findViewById(R.id.editTextAdRue4);
+        cp=(EditText) findViewById(R.id.editTextCP4);
+        ville=(EditText) findViewById(R.id.editTextVille4);
+        dateEmbauche=(EditText) findViewById(R.id.editTextDate4);
+        ajoutBD=(Button) findViewById(R.id.ButtonModif18);
 
         ajoutBD.setOnClickListener(this);
 

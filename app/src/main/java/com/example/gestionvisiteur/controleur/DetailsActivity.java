@@ -36,17 +36,17 @@ public class DetailsActivity extends AppCompatActivity implements View.OnClickLi
         villeV=getIntent().getStringExtra("ville");
         dateEmbaucheV=getIntent().getStringExtra("dateEmbauche");
 
-        editId=(EditText) findViewById(R.id.editTextId3);
-        editNom=(EditText) findViewById(R.id.editTextNom3);
-        editPrenom=(EditText) findViewById(R.id.editTextPre3);
-        editLog=(EditText) findViewById(R.id.editTextLogin3);
-        editMdp=(EditText) findViewById(R.id.editTextMdp3);
-        editAdr=(EditText) findViewById(R.id.editTextAdRue3);
-        editCp=(EditText) findViewById(R.id.editTextCP3);
-        editVill=(EditText) findViewById(R.id.editTextVille3);
-        editDate=(EditText) findViewById(R.id.editTextDate3);
+        editId=(EditText) findViewById(R.id.editTextId4);
+        editNom=(EditText) findViewById(R.id.editTextNom4);
+        editPrenom=(EditText) findViewById(R.id.editTextPre4);
+        editLog=(EditText) findViewById(R.id.editTextLogin4);
+        editMdp=(EditText) findViewById(R.id.editTextMdp4);
+        editAdr=(EditText) findViewById(R.id.editTextAdRue4);
+        editCp=(EditText) findViewById(R.id.editTextCP4);
+        editVill=(EditText) findViewById(R.id.editTextVille4);
+        editDate=(EditText) findViewById(R.id.editTextDate4);
 
-        modif=(Button) findViewById(R.id.ButtonModif2);
+        modif=(Button) findViewById(R.id.ButtonModif18);
         supp=(Button) findViewById(R.id.buttonSuppModif);
 
         editId.setText(AncidV);
@@ -69,7 +69,7 @@ public class DetailsActivity extends AppCompatActivity implements View.OnClickLi
     @Override
     public void onClick(View view) {
         switch(view.getId()){
-            case R.id.ButtonModif2:
+            case R.id.ButtonModif18:
 
 
 
