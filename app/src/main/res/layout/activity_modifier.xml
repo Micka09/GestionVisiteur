@@ -250,11 +250,6 @@
                 tools:layout_editor_absoluteX="125dp"
                 tools:layout_editor_absoluteY="432dp" />
 
-            <Button
-                android:id="@+id/buttonRetour4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Button" />
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>
