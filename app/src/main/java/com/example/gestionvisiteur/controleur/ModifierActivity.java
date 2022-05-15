@@ -26,7 +26,7 @@ public class ModifierActivity extends AppCompatActivity implements View.OnClickL
     private String id,nom,prenom,login,mdp,adresse,cp,ville,date;
     private EditText editId,editNom,editPre,editLog,editMdp,editAdr,editCp,editVi,editD;
     Spinner spinnerVisiteur;
-    private Button but18,butret18;
+    private Button but18;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,8 +36,8 @@ public class ModifierActivity extends AppCompatActivity implements View.OnClickL
         but18=(Button) findViewById(R.id.ButtonModif18);
         but18.setOnClickListener(this);
 
-        butret18=(Button) findViewById(R.id.buttonRetour4);
-        butret18.setOnClickListener(this);
+
+
 
         editId=(EditText) findViewById(R.id.editTextId4);
         editNom=(EditText) findViewById(R.id.editTextNom4);
@@ -107,9 +107,6 @@ public class ModifierActivity extends AppCompatActivity implements View.OnClickL
                 startActivity(i);
                 break;
 
-            case R.id.buttonRetour4:
-                Intent z=new Intent(ModifierActivity.this,PropositionActivity.class);
-                startActivity(z);
 
         }
     }
